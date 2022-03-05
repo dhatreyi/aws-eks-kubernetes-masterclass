@@ -33,13 +33,13 @@ which aws
 - Install the downloaded binary (standard windows install)
 ```
 aws --version
-aws-cli/2.0.8 Python/3.7.5 Windows/10 botocore/2.0.0dev12
+aws-cli/2.4.23 Python/3.8.8 Windows/10 exe/AMD64 prompt/off
 ```
 - Reference: https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-windows.html
 
 ### Step-01-03: Configure AWS Command Line using Security Credentials
 - Go to AWS Management Console --> Services --> IAM
-- Select the IAM User: kalyan 
+- Select the IAM User: mahesh 
 - **Important Note:** Use only IAM user to generate **Security Credentials**. Never ever use Root User. (Highly not recommended)
 - Click on **Security credentials** tab
 - Click on **Create access key**
@@ -63,13 +63,13 @@ aws ec2 describe-vpcs
 - Reference: https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html
 
 ### Step-02-01: MAC - Install and configure kubectl
-- Kubectl version we are using here is 1.16.8 (It may vary based on Cluster version you are planning use in AWS EKS)
+- Kubectl version we are using here is 1.21.2 (It may vary based on Cluster version you are planning use in AWS EKS)
 
 ```
 # Download the Package
 mkdir kubectlbinary
 cd kubectlbinary
-curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.16.8/2020-04-16/bin/darwin/amd64/kubectl
+curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.21.2/2021-07-05/bin/darwin/amd64/kubectl
 
 # Provide execute permissions
 chmod +x ./kubectl
@@ -80,16 +80,16 @@ echo 'export PATH=$PATH:$HOME/bin' >> ~/.bash_profile
 
 # Verify the kubectl version
 kubectl version --short --client
-Output: Client Version: v1.16.8-eks-e16311
+Output: Client Version: v1.21.2.-eks-e16311
 ```
 
 
 ### Step-02-02: Windows 10 - Install and configure kubectl
-- Install kubectl on Windows 10 
+- Install kubectl on Windows 10 <<Here the kubectl version I am using is 1.21.2>>
 ```
 mkdir kubectlbinary
 cd kubectlbinary
-curl -o kubectl.exe https://amazon-eks.s3.us-west-2.amazonaws.com/1.16.8/2020-04-16/bin/windows/amd64/kubectl.exe
+curl -o kubectl.exe https://amazon-eks.s3.us-west-2.amazonaws.com/1.21.2/2021-07-05/bin/windows/amd64/kubectl.exe
 ```
 - Update the system **Path** environment variable 
 ```
